@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-30 01:30:54",
+  "python": "3.12.14",
+  "streamlit": "1.50.0",
+  "method": "Streamlit AppTest and direct contract calls",
+  "source_sha256": {
+    "streamlit_app.py": "58a91fdfec26516b0eccde78b88260057b3c4271718c79ac74abe3a5b92918bf",
+    "src/contract.py": "d46ebea8352d600be22fb46bf64893b5db2adb0cfdf9486461a1b0346d135233",
+    "artifacts/model.joblib": "fb7c6dad19f00489e60605efe54ea6ec69f5cb274660e95ed52f1ded04940b50",
+    "demo/examples.json": "05a288812e9a4f9972e69f6c67c4f7a7192b18774f77c79fd168efb1475cf4f5",
+    "requirements-lock.txt": "c2891ca5afb770f9a91660449a10e3fc784c266b189a473b777aec4cd82f1571"
+  },
+  "results": [
+    {
+      "id": "TC-01",
+      "title": "Запуск интерфейса",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-02",
+      "title": "Пример 1",
+      "status": "PASS",
+      "details": {
+        "input": {
+          "lead_time": 0,
+          "stays_in_weekend_nights": 1,
+          "stays_in_week_nights": 0,
+          "adults": 2,
+          "children": 0,
+          "babies": 0,
+          "hotel": "Resort Hotel",
+          "arrival_date_month": "January",
+          "meal": "BB",
+          "market_segment": "Offline TA/TO",
+          "reserved_room_type": "A"
+        },
+        "actual": {
+          "probability": 0.032905096628506776,
+          "risk": "Низкий",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "expected": {
+          "probability": 0.032905096628506776,
+          "risk": "Низкий",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "ui": {
+          "exceptions": [],
+          "errors": [],
+          "metrics": [
+            {
+              "label": "Оценка вероятности отмены",
+              "value": "3.3%"
+            },
+            {
+              "label": "Категория риска",
+              "value": "Низкий"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "TC-03",
+      "title": "Пример 2",
+      "status": "PASS",
+      "details": {
+        "input": {
+          "lead_time": 241,
+          "stays_in_weekend_nights": 1,
+          "stays_in_week_nights": 2,
+          "adults": 1,
+          "children": 0,
+          "babies": 0,
+          "hotel": "City Hotel",
+          "arrival_date_month": "October",
+          "meal": "BB",
+          "market_segment": "Groups",
+          "reserved_room_type": "A"
+        },
+        "actual": {
+          "probability": 0.2773894823554712,
+          "risk": "Средний",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "expected": {
+          "probability": 0.2773894823554712,
+          "risk": "Средний",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "ui": {
+          "exceptions": [],
+          "errors": [],
+          "metrics": [
+            {
+              "label": "Оценка вероятности отмены",
+              "value": "27.7%"
+            },
+            {
+              "label": "Категория риска",
+              "value": "Средний"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "TC-04",
+      "title": "Пример 3",
+      "status": "PASS",
+      "details": {
+        "input": {
+          "lead_time": 14,
+          "stays_in_weekend_nights": 6,
+          "stays_in_week_nights": 16,
+          "adults": 2,
+          "children": 0,
+          "babies": 0,
+          "hotel": "City Hotel",
+          "arrival_date_month": "February",
+          "meal": "SC",
+          "market_segment": "Online TA",
+          "reserved_room_type": "A"
+        },
+        "actual": {
+          "probability": 0.9775879473156963,
+          "risk": "Высокий",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "expected": {
+          "probability": 0.9775879473156963,
+          "risk": "Высокий",
+          "threshold": 0.2946430022138759,
+          "model_id": "E2_hist_gradient_boosting"
+        },
+        "ui": {
+          "exceptions": [],
+          "errors": [],
+          "metrics": [
+            {
+              "label": "Оценка вероятности отмены",
+              "value": "97.8%"
+            },
+            {
+              "label": "Категория риска",
+              "value": "Высокий"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "TC-05",
+      "title": "Ноль гостей",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [
+          "Общее число гостей должно быть от 1 до 20."
+        ],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-06",
+      "title": "Ноль ночей",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [
+          "Общая длительность проживания должна быть от 1 до 365 ночей."
+        ],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-07",
+      "title": "Суммарные ограничения",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [
+          "Общее число гостей должно быть от 1 до 20."
+        ],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-08",
+      "title": "Допустимая верхняя граница",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [],
+        "metrics": [
+          {
+            "label": "Оценка вероятности отмены",
+            "value": "92.9%"
+          },
+          {
+            "label": "Категория риска",
+            "value": "Высокий"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TC-09",
+      "title": "Очистка результата при заполнении примера",
+      "status": "PASS",
+      "details": {
+        "exceptions": [],
+        "errors": [],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-10",
+      "title": "Некорректные значения на уровне функции",
+      "status": "PASS",
+      "details": [
+        {
+          "input_change": {
+            "adults": -1
+          },
+          "rejected": true,
+          "message": "Взрослых: допустимо от 0 до 20."
+        },
+        {
+          "input_change": {
+            "children": 1.5
+          },
+          "rejected": true,
+          "message": "Детей: требуется целое число."
+        },
+        {
+          "input_change": {
+            "lead_time": null
+          },
+          "rejected": true,
+          "message": "Дней до заезда: требуется целое число."
+        },
+        {
+          "input_change": {
+            "hotel": "Unknown"
+          },
+          "rejected": true,
+          "message": "Тип отеля: выберите значение из списка."
+        }
+      ]
+    },
+    {
+      "id": "TC-11",
+      "title": "Отсутствует файл демонстрационных примеров",
+      "status": "FAIL",
+      "details": {
+        "exceptions": [
+          "[Errno 2] No such file or directory: 'C:\\\\Users\\\\admin\\\\Documents\\\\ChatGPT\\\\прикладная статистика\\\\mvp_homework_work\\\\app\\\\demo\\\\examples.json'"
+        ],
+        "errors": [],
+        "metrics": []
+      }
+    },
+    {
+      "id": "TC-12",
+      "title": "Пояснения к кодам в форме",
+      "status": "FAIL",
+      "details": {
+        "fields": [
+          {
+            "label": "Питание",
+            "options": [
+              "BB",
+              "FB",
+              "HB",
+              "SC",
+              "Undefined"
+            ],
+            "help": ""
+          },
+          {
+            "label": "Сегмент бронирования",
+            "options": [
+              "Aviation",
+              "Complementary",
+              "Corporate",
+              "Direct",
+              "Groups",
+              "Offline TA/TO",
+              "Online TA"
+            ],
+            "help": ""
+          },
+          {
+            "label": "Забронированный тип номера",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H",
+              "L"
+            ],
+            "help": ""
+          }
+        ],
+        "note": "Дополнительная проверка удобства: в форме нет расшифровки кодов и подсказок; это замечание UX, не численный критерий ТЗ."
+      }
+    }
+  ],
+  "pass": 10,
+  "fail": 2
+}

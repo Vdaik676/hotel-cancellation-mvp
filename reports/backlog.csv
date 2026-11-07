@@ -1,0 +1,16 @@
+﻿ID;Задача;Ответственный;Приоритет;Статус;Зависимости;Критерий и доказательство
+MVP-01;Уточнить цель и оформить Canvas;Саид;Must;Done;—;"Canvas содержит восемь блоков; docs/01_MVP_Canvas.docx"
+MVP-02;Зафиксировать источник и checksum данных;Вадим;Must;Done;MVP-01;data/source.json, SHA-256 совпадает с CSV
+MVP-03;Проверить качество и доступность полей;"Вадим; Саид";Must;Done;MVP-02;"reports/data_audit.json; 11 разрешённых полей, leakage-поля исключены"
+MVP-04;Зафиксировать train/validation/test;Вадим;Must;Done;MVP-03;"split_manifest.csv; группы входов не пересекаются"
+MVP-05;Обучить Dummy baseline;Саид;Must;Done;MVP-04;"B0_prior.joblib; метрики baseline на том же test"
+MVP-06;Эксперимент E1 LogisticRegression;"Саид; Вадим";Must;Done;MVP-05;Фактический запуск и параметры в reports/metrics.json
+MVP-07;Эксперимент E2 HistGradientBoosting;"Вадим; Саид";Must;Done;MVP-06;"Параметры и метрики E2 в журнале; без подбора на test"
+MVP-08;Выбрать модель и порог на validation;"Саид; Вадим";Must;Done;MVP-06,07;selection_before_test.json и model.joblib
+MVP-09;Создать форму одиночного прогноза;Арсений;Must;Done;MVP-03,08;"streamlit_app.py; тесты UI и сценария"
+MVP-10;Проверить ошибки и границы риска;Арсений;Must;Done;MVP-09;Негативные сценарии и граничные значения в tests/test_mvp.py
+MVP-11;Повторить оценку и замерить задержку;"Арсений; Вадим";Must;Done;MVP-08,10;"Два лога оценки; метрики совпали, P95 ≤ 3 с"
+MVP-12;Подготовить README и Demo Script;"Саид; Арсений";Must;Done;MVP-09,11;"README.md; docs/04_Demo_Script.docx"
+MVP-13;Оформить решения встречи 20.10;Саид;Must;Done;MVP-01;"docs/05_Meeting_Notes.docx; содержание подтверждено пользователем"
+MVP-14;Подтвердить запуск другим участником;Арсений;Must;Ready;MVP-12;Другой участник запускает по README и фиксирует окружение и результат
+MVP-15;Провести демо и согласовать отклонения;"Саид; вся команда";Must;Ready;MVP-11,12,14;Обратная связь, решение преподавателя по метрикам, следующие действия

@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "python": "3.12.14",
+  "examples": [
+    {
+      "name": "Пример 1",
+      "probability": 0.032905096628506776,
+      "risk": "Низкий",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    },
+    {
+      "name": "Пример 2",
+      "probability": 0.2773894823554712,
+      "risk": "Средний",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    },
+    {
+      "name": "Пример 3",
+      "probability": 0.9775879473156963,
+      "risk": "Высокий",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    }
+  ],
+  "valid_inputs": 20,
+  "warm_inference_p95_ms": 7.6663199928589165,
+  "measurement": "local inference only, 20 calls, excludes browser and startup"
+}

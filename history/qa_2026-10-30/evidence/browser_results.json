@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29T22:32:08.809Z",
+  "browser": "156.0.8078.49",
+  "method": "Chrome headless, Playwright, real Streamlit HTTP server",
+  "checks": [
+    {
+      "id": "B-01",
+      "status": "PASS",
+      "description": "Page loaded and example 2 result displayed"
+    },
+    {
+      "id": "B-02",
+      "status": "PASS",
+      "description": "Downloaded JSON matches example 2 prediction",
+      "result": {
+        "probability": 0.2773894823554712,
+        "risk": "Средний",
+        "threshold": 0.2946430022138759,
+        "model_id": "E2_hist_gradient_boosting"
+      }
+    },
+    {
+      "id": "B-03",
+      "status": "PASS",
+      "description": "Zero guests error displayed and old metrics removed"
+    },
+    {
+      "id": "B-04",
+      "status": "PASS",
+      "description": "Quality tab accessible"
+    }
+  ]
+}

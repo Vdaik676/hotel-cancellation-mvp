@@ -1,0 +1,134 @@
+{
+  "status": "offline_only",
+  "runs": [
+    {
+      "id": "E3_booking_history",
+      "features": [
+        "lead_time",
+        "stays_in_weekend_nights",
+        "stays_in_week_nights",
+        "adults",
+        "children",
+        "babies",
+        "hotel",
+        "arrival_date_month",
+        "meal",
+        "market_segment",
+        "reserved_room_type",
+        "previous_cancellations",
+        "previous_bookings_not_canceled",
+        "is_repeated_guest",
+        "distribution_channel",
+        "customer_type",
+        "arrival_date_day_of_month"
+      ],
+      "validation": {
+        "roc_auc": 0.777262231741985,
+        "f1": 0.5779528825279409,
+        "recall": 0.7461075358106706,
+        "precision": 0.4716535433070866,
+        "brier": 0.15950752437609222,
+        "confusion_matrix": [
+          [
+            8493,
+            4026
+          ],
+          [
+            1223,
+            3594
+          ]
+        ],
+        "threshold": 0.3071798145108538,
+        "n": 17336
+      },
+      "test": {
+        "roc_auc": 0.7680278427819931,
+        "f1": 0.5683060109289617,
+        "recall": 0.736820170868931,
+        "precision": 0.4625245258338784,
+        "brier": 0.1621192980290461,
+        "confusion_matrix": [
+          [
+            8409,
+            4109
+          ],
+          [
+            1263,
+            3536
+          ]
+        ],
+        "threshold": 0.3071798145108538,
+        "n": 17317
+      }
+    },
+    {
+      "id": "E4_snapshot_requests",
+      "features": [
+        "lead_time",
+        "stays_in_weekend_nights",
+        "stays_in_week_nights",
+        "adults",
+        "children",
+        "babies",
+        "hotel",
+        "arrival_date_month",
+        "meal",
+        "market_segment",
+        "reserved_room_type",
+        "previous_cancellations",
+        "previous_bookings_not_canceled",
+        "is_repeated_guest",
+        "distribution_channel",
+        "customer_type",
+        "arrival_date_day_of_month",
+        "total_of_special_requests",
+        "required_car_parking_spaces"
+      ],
+      "validation": {
+        "roc_auc": 0.8313308135346128,
+        "f1": 0.6297848561050573,
+        "recall": 0.7018891426198879,
+        "precision": 0.5711148648648648,
+        "brier": 0.14094356863794366,
+        "confusion_matrix": [
+          [
+            9980,
+            2539
+          ],
+          [
+            1436,
+            3381
+          ]
+        ],
+        "threshold": 0.30595400450886634,
+        "n": 17336
+      },
+      "test": {
+        "roc_auc": 0.8241644929821581,
+        "f1": 0.6129123202706512,
+        "recall": 0.6795165659512399,
+        "precision": 0.5581992468332763,
+        "brier": 0.14338927511371086,
+        "confusion_matrix": [
+          [
+            9937,
+            2581
+          ],
+          [
+            1538,
+            3261
+          ]
+        ],
+        "threshold": 0.30595400450886634,
+        "n": 17317
+      }
+    }
+  ],
+  "source_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "limits": [
+    "Reused historical E2 benchmark, not a fresh external test.",
+    "Historical data is a final snapshot. Availability of requests and parking at booking is unverified.",
+    "No assigned room, status, status date, deposit, agent/company IDs or nationality in these candidates.",
+    "Release stays E2 because expanded feature contract and point-in-time availability need validation."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "selected": "E10_hgb_regularized",
+  "threshold": 0.2747793980492662,
+  "basis": "validation only, all goals then recall floor then F1 then AUC",
+  "train_rows": 51972,
+  "validation_rows": 17336
+}

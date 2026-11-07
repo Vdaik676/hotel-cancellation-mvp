@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Пример 1",
+    "input": {
+      "lead_time": 0,
+      "stays_in_weekend_nights": 1,
+      "stays_in_week_nights": 0,
+      "adults": 2,
+      "children": 0,
+      "babies": 0,
+      "hotel": "Resort Hotel",
+      "arrival_date_month": "January",
+      "meal": "BB",
+      "market_segment": "Offline TA/TO",
+      "reserved_room_type": "A"
+    },
+    "expected": {
+      "probability": 0.032905096628506776,
+      "risk": "Низкий",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    }
+  },
+  {
+    "name": "Пример 2",
+    "input": {
+      "lead_time": 241,
+      "stays_in_weekend_nights": 1,
+      "stays_in_week_nights": 2,
+      "adults": 1,
+      "children": 0,
+      "babies": 0,
+      "hotel": "City Hotel",
+      "arrival_date_month": "October",
+      "meal": "BB",
+      "market_segment": "Groups",
+      "reserved_room_type": "A"
+    },
+    "expected": {
+      "probability": 0.2773894823554712,
+      "risk": "Средний",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    }
+  },
+  {
+    "name": "Пример 3",
+    "input": {
+      "lead_time": 14,
+      "stays_in_weekend_nights": 6,
+      "stays_in_week_nights": 16,
+      "adults": 2,
+      "children": 0,
+      "babies": 0,
+      "hotel": "City Hotel",
+      "arrival_date_month": "February",
+      "meal": "SC",
+      "market_segment": "Online TA",
+      "reserved_room_type": "A"
+    },
+    "expected": {
+      "probability": 0.9775879473156963,
+      "risk": "Высокий",
+      "threshold": 0.2946430022138759,
+      "model_id": "E2_hist_gradient_boosting"
+    }
+  }
+]

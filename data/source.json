@@ -1,0 +1,9 @@
+{
+  "download_date": "2026-10-23",
+  "url": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv",
+  "sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "bytes": 16855599,
+  "original_doi": "10.1016/j.dib.2018.11.126",
+  "authors": "Nuno António, Ana de Almeida, Luís Nunes",
+  "source_dictionary": "https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-02-11/readme.md"
+}

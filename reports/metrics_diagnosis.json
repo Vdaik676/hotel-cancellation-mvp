@@ -1,0 +1,51 @@
+{
+  "basis": "validation only; no model or threshold changed",
+  "validation_rows": 17336,
+  "validation_cancellation_rate": 0.2778610982925704,
+  "mixed_input_groups": 615,
+  "rows_in_mixed_input_groups": 2034,
+  "e2_frozen_validation": {
+    "roc_auc": 0.7430404352956685,
+    "f1": 0.5491614094476073,
+    "recall": 0.7409175835582312,
+    "precision": 0.4362547365847696,
+    "brier": 0.17078316359146256,
+    "confusion_matrix": [
+      [
+        7907,
+        4612
+      ],
+      [
+        1248,
+        3569
+      ]
+    ],
+    "threshold": 0.2946430022138759,
+    "n": 17336
+  },
+  "e2_best_f1_any_validation_threshold": 0.5491614094476073,
+  "e2_best_f1_validation_recall_at_least_070": 0.5491614094476073,
+  "precision_needed_for_f1_070_at_recall_070": 0.7,
+  "validation_descriptive_group_oracle_f1": 0.9309572301425662,
+  "validation_descriptive_group_oracle_auc": 0.9954944465313699,
+  "oracle_limit": "Uses validation labels; descriptive only, not a generalization bound. A stronger model or new known-at-booking features could improve performance.",
+  "test_frozen": {
+    "roc_auc": 0.7306473552017164,
+    "f1": 0.5378048780487805,
+    "recall": 0.7351531569076891,
+    "precision": 0.4239875015022233,
+    "brier": 0.17367751660379127,
+    "confusion_matrix": [
+      [
+        7725,
+        4793
+      ],
+      [
+        1271,
+        3528
+      ]
+    ],
+    "threshold": 0.2946430022138759,
+    "n": 17317
+  }
+}

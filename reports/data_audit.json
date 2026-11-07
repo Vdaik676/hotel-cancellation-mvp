@@ -1,0 +1,72 @@
+{
+  "raw_rows": 119390,
+  "raw_columns": 32,
+  "raw_positive_rate": 0.37041628277075134,
+  "exact_duplicates_removed": 31994,
+  "invalid_rows_removed": 771,
+  "usable_rows": 86625,
+  "input_groups": 67672,
+  "sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+  "split_seed": 42,
+  "split_method": "60/20/20 of input groups; stratified by group outcome profile; row shares can differ",
+  "split": {
+    "train": {
+      "rows": 51972,
+      "positive_rate": 0.2762256599707535,
+      "groups": 40603
+    },
+    "validation": {
+      "rows": 17336,
+      "positive_rate": 0.2778610982925704,
+      "groups": 13534
+    },
+    "test": {
+      "rows": 17317,
+      "positive_rate": 0.2771265230698158,
+      "groups": 13535
+    }
+  },
+  "missing_raw": {
+    "children": 4,
+    "country": 488,
+    "agent": 16340,
+    "company": 112593
+  },
+  "features": [
+    "lead_time",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "hotel",
+    "arrival_date_month",
+    "meal",
+    "market_segment",
+    "reserved_room_type"
+  ],
+  "excluded_columns": [
+    "is_canceled",
+    "arrival_date_year",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "country",
+    "distribution_channel",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "assigned_room_type",
+    "booking_changes",
+    "deposit_type",
+    "agent",
+    "company",
+    "days_in_waiting_list",
+    "customer_type",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests",
+    "reservation_status",
+    "reservation_status_date"
+  ],
+  "availability_limit": "CSV is a final historical snapshot; fields are conservatively chosen candidates, not verified point-in-time snapshots."
+}

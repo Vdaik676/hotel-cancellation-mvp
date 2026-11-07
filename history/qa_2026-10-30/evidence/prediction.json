@@ -1,0 +1,6 @@
+{
+  "probability": 0.2773894823554712,
+  "risk": "Средний",
+  "threshold": 0.2946430022138759,
+  "model_id": "E2_hist_gradient_boosting"
+}

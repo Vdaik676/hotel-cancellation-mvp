@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-23",
+  "selection": {
+    "selected_model": "E2_hist_gradient_boosting",
+    "threshold": 0.2946430022138759,
+    "basis": "Highest validation F1 among recall>=0.70; tie by ROC-AUC. No test metric used for selection.",
+    "recorded_utc": "2026-10-23T17:41:53.359231+00:00",
+    "train_refit": false
+  },
+  "experiments": [
+    {
+      "id": "B0_prior",
+      "hypothesis": "Reference prevalence, no input features",
+      "validation": {
+        "roc_auc": 0.5,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "brier": 0.20065698300672136,
+        "confusion_matrix": [
+          [
+            12519,
+            0
+          ],
+          [
+            4817,
+            0
+          ]
+        ],
+        "threshold": 0.5,
+        "n": 17336
+      },
+      "fit_seconds": 0.07037730002775788,
+      "parameters": {
+        "constant": null,
+        "random_state": null,
+        "strategy": "prior"
+      },
+      "seed": 42,
+      "test": {
+        "roc_auc": 0.5,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "brier": 0.20032822483537388,
+        "confusion_matrix": [
+          [
+            12518,
+            0
+          ],
+          [
+            4799,
+            0
+          ]
+        ],
+        "threshold": 0.5,
+        "n": 17317
+      }
+    },
+    {
+      "id": "E1_logistic",
+      "hypothesis": "Linear relationships on the conservative input set",
+      "validation": {
+        "roc_auc": 0.7003376872551272,
+        "f1": 0.5169653069004956,
+        "recall": 0.7037575254307661,
+        "precision": 0.40853217642805495,
+        "brier": 0.18077196975713777,
+        "confusion_matrix": [
+          [
+            7611,
+            4908
+          ],
+          [
+            1427,
+            3390
+          ]
+        ],
+        "threshold": 0.2814673000022463,
+        "n": 17336
+      },
+      "fit_seconds": 0.20636469998862594,
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": null,
+        "max_iter": 1000,
+        "multi_class": "deprecated",
+        "n_jobs": null,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "seed": 42,
+      "test": {
+        "roc_auc": 0.6895987677307087,
+        "f1": 0.5019738839963559,
+        "recall": 0.6888935194832256,
+        "precision": 0.39484055893944825,
+        "brier": 0.1826907299304907,
+        "confusion_matrix": [
+          [
+            7451,
+            5067
+          ],
+          [
+            1493,
+            3306
+          ]
+        ],
+        "threshold": 0.2814673000022463,
+        "n": 17317
+      }
+    },
+    {
+      "id": "E2_hist_gradient_boosting",
+      "hypothesis": "Nonlinear interactions on exactly the same inputs",
+      "validation": {
+        "roc_auc": 0.7430404352956685,
+        "f1": 0.5491614094476073,
+        "recall": 0.7409175835582312,
+        "precision": 0.4362547365847696,
+        "brier": 0.17078316359146256,
+        "confusion_matrix": [
+          [
+            7907,
+            4612
+          ],
+          [
+            1248,
+            3569
+          ]
+        ],
+        "threshold": 0.2946430022138759,
+        "n": 17336
+      },
+      "fit_seconds": 1.4447715999558568,
+      "parameters": {
+        "categorical_features": "from_dtype",
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 2.0,
+        "learning_rate": 0.08,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_iter": 220,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 42,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "seed": 42,
+      "test": {
+        "roc_auc": 0.7306473552017164,
+        "f1": 0.5378048780487805,
+        "recall": 0.7351531569076891,
+        "precision": 0.4239875015022233,
+        "brier": 0.17367751660379127,
+        "confusion_matrix": [
+          [
+            7725,
+            4793
+          ],
+          [
+            1271,
+            3528
+          ]
+        ],
+        "threshold": 0.2946430022138759,
+        "n": 17317
+      }
+    }
+  ],
+  "goals": {
+    "REQ-04_baseline_beaten": true,
+    "REQ-05_recall_070": true,
+    "REQ-06_auc_080": false,
+    "REQ-06_f1_070": false
+  },
+  "versions": {
+    "scikit-learn": "1.7.2",
+    "streamlit": "1.50.0",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "pytest": "8.4.2",
+    "matplotlib": "3.10.7"
+  },
+  "python": "3.12.14",
+  "split": {
+    "train": {
+      "rows": 51972,
+      "positive_rate": 0.2762256599707535,
+      "groups": 40603
+    },
+    "validation": {
+      "rows": 17336,
+      "positive_rate": 0.2778610982925704,
+      "groups": 13534
+    },
+    "test": {
+      "rows": 17317,
+      "positive_rate": 0.2771265230698158,
+      "groups": 13535
+    }
+  },
+  "limitations": [
+    "Historical random grouped split; no prospective hotel validation.",
+    "No PMS/CRM and no causal or revenue benefit proved.",
+    "Final snapshot cannot prove registration-time availability.",
+    "Probability estimates not calibrated on a separate calibration set.",
+    "Should targets are reported, never silently weakened."
+  ]
+}

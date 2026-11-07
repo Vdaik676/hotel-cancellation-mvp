@@ -1,0 +1,5 @@
+{
+  "candidate": "E4_snapshot_requests",
+  "threshold": 0.30595400450886634,
+  "basis": "maximum validation F1 with recall >= 0.70, experimental only; no change to production input contract"
+}

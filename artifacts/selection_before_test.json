@@ -1,0 +1,7 @@
+{
+  "selected_model": "E2_hist_gradient_boosting",
+  "threshold": 0.2946430022138759,
+  "basis": "Highest validation F1 among recall>=0.70; tie by ROC-AUC. No test metric used for selection.",
+  "recorded_utc": "2026-10-23T17:41:53.359231+00:00",
+  "train_refit": false
+}
